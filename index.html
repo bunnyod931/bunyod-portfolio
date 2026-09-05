@@ -1,10 +1,337 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prof. Dr. Bunyod Samandarov | Academic Portfolio</title><meta name="description" content="Academic portfolio of Prof. Dr. Bunyod Samandarov, Doctor of Science (DSc), researcher and educator."><link rel="stylesheet" href="styles.css"></head><body>
-<nav class="nav"><div class="wrap navin"><a class="brand" href="#top">BUNYOD<span>.</span></a><div class="menu"><a href="#about">About</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="#contact">Contact</a><a class="admin-link" href="admin.html">Admin</a></div></div></nav>
-<main id="top"><section class="wrap hero"><div><div class="eyebrow"><span class="dot"></span><span id="availability">Professor · Researcher · Educator</span></div><h1><span id="firstName">Bunyod</span><br><span class="gradient" id="lastName">Samandarov</span></h1><div class="hero-meta"><strong id="title">Professor at Al-Khwarizmi University</strong><br><span id="degree">Doctor of Science (DSc)</span></div><p class="lead" id="shortBio">Researcher and educator working across next-generation communication systems, satellite-IoT, computer programming, information systems and digital technologies.</p><div class="actions"><a class="btn primary" href="#research">Explore my work</a><a class="btn" id="cvBtn" href="#" target="_blank">View CV</a><a class="btn" href="mailto:bunyod.academic@gmail.com" id="emailBtn">Contact me</a></div></div><div class="photo-card"><img src="assets/profile.jpg" alt="Bunyod Samandarov"><div class="photo-caption"><span>Academic portfolio</span><span>Uzbekistan</span></div></div></section>
-<section class="section" id="about"><div class="wrap"><div class="section-head"><div><p class="kicker">ABOUT</p><h2>Academic profile</h2></div><p class="section-desc" id="aboutText">My work combines research, teaching, and practical innovation. I am especially interested in next-generation satellite systems, LEO constellations, IoT ecosystems, and digital technologies that can improve connectivity and smart infrastructure.</p></div><div class="grid"><div class="card"><div class="stat">DSc</div><h3>Doctor of Science</h3><p>Advanced academic degree in technical sciences.</p></div><div class="card"><div class="stat">2017+</div><h3>Higher education</h3><p>Teaching and academic experience across telecommunication and digital technology disciplines.</p></div><div class="card"><div class="stat">EU</div><h3>International research</h3><p>Research experience at Universitat Autònoma de Barcelona and European collaborative projects.</p></div></div></div></section>
-<section class="section" id="research"><div class="wrap"><div class="section-head"><div><p class="kicker">RESEARCH</p><h2>Research expertise</h2></div><p class="section-desc" id="researchText">My research focuses on next-generation satellite systems, integrating LEO constellations with IoT ecosystems, multi-objective optimization, regional link design, resilient network architectures and New Space services.</p></div><div class="grid" id="researchCards"><div class="card"><h3>Satellite & New Space</h3><p>LEO constellations, regional system design and advanced space-enabled services.</p></div><div class="card"><h3>Satellite-IoT</h3><p>Large-scale connectivity architectures connecting IoT ecosystems through satellite systems.</p></div><div class="card"><h3>Digital Technologies</h3><p>Computer programming, information systems and practical digital education.</p></div></div></div></section>
-<section class="section" id="experience"><div class="wrap"><div class="section-head"><div><p class="kicker">CAREER</p><h2>Experience & education</h2></div></div><div class="timeline" id="experienceList"></div></div></section>
-<section class="section" id="publications"><div class="wrap"><div class="section-head"><div><p class="kicker">PUBLICATIONS</p><h2>Selected work</h2></div><p class="section-desc">A selection of publications and academic outputs. You can manage this list from the admin panel.</p></div><div class="card" id="publicationList"></div></div></section>
-<section class="section" id="contact"><div class="wrap"><div class="section-head"><div><p class="kicker">CONTACT</p><h2>Let’s connect</h2></div><p class="section-desc">For academic collaboration, research projects, teaching, and professional enquiries.</p></div><div class="contact-grid"><a class="contact-item" id="contactEmail" href="mailto:bunyod.academic@gmail.com"><strong>Email</strong><br><span>bunyod.academic@gmail.com</span></a><div class="contact-item"><strong>Location</strong><br><span id="location">Khorezm, Uzbekistan</span></div></div></div></section></main>
-<footer><div class="wrap">© <span id="year"></span> Bunyod Samandarov. Academic Portfolio.</div></footer>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Academic portfolio of Prof. Dr. Bunyod Samandarov — Professor at Al-Khwarizmi University, Doctor of Science (DSc), researcher and educator." />
+  <meta name="theme-color" content="#08111f" />
+  <title>Bunyod Samandarov | Professor · Researcher · Educator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Bunyod Samandarov home">
+      <span class="brand-mark">BS</span>
+      <span class="brand-text">Bunyod Samandarov</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#journey">PhD Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> Professor · Researcher · Educator</p>
+        <h1>Bunyod<br /><span>Samandarov</span></h1>
+        <p class="hero-role">Professor, Department of Software Engineering<br /><a href="https://akhu.uz/" target="_blank" rel="noopener">Al-Khwarizmi University</a></p>
+        <p class="degree">Doctor of Science (DSc)</p>
+        <p class="hero-summary">I work at the intersection of next-generation communication systems, satellite-IoT, intelligent connectivity, computer programming, information systems and digital technologies.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#research">Explore my research</a>
+          <a class="button button-ghost" href="assets/CV_Bunyod.pdf" target="_blank" rel="noopener">View CV</a>
+        </div>
+        <div class="hero-metrics" aria-label="Academic highlights">
+          <div><strong>2026–</strong><span>Professor</span></div>
+          <div><strong>DSc</strong><span>Doctor of Science</span></div>
+          <div><strong>2021–24</strong><span>Doctoral research · UAB</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="portrait-frame">
+          <img src="assets/profile.jpg" alt="Portrait of Bunyod Samandarov" />
+          <div class="portrait-caption">
+            <span>Academic portfolio</span>
+            <span>Uzbekistan</span>
+          </div>
+        </div>
+        <div class="floating-card floating-card-a"><span>Research</span><strong>Satellite · IoT · New Space</strong></div>
+        <div class="floating-card floating-card-b"><span>Teaching</span><strong>Programming · Digital Technologies</strong></div>
+      </div>
+    </section>
+
+    <section class="section section-grid" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 · About</p>
+        <h2>Academic work with a global perspective.</h2>
+      </div>
+      <div class="about-copy reveal">
+        <p class="lead">I am a professor, researcher and educator with experience across telecommunications, satellite systems, digital technologies and higher education.</p>
+        <p>My research has focused on next-generation satellite systems, Low Earth Orbit constellations, Satellite-IoT integration, multi-objective system design and resilient connectivity. In teaching, I work with computer programming, information systems and digital technologies, helping students connect fundamental concepts with practical problem-solving.</p>
+        <p>My academic journey includes doctoral research at Universitat Autònoma de Barcelona and university teaching experience in Uzbekistan.</p>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-heading compact reveal">
+        <p class="eyebrow">02 · Experience & Education</p>
+        <h2>Academic timeline</h2>
+      </div>
+      <div class="timeline reveal">
+        <article class="timeline-item current">
+          <div class="timeline-year">2026 – Present</div>
+          <div class="timeline-content">
+            <span class="timeline-tag">Current position</span>
+            <h3>Professor</h3>
+            <p>Department of Software Engineering, <a href="https://akhu.uz/" target="_blank" rel="noopener">Al-Khwarizmi University</a></p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-year">2025 – 2026</div>
+          <div class="timeline-content">
+            <h3>Associate Professor</h3>
+            <p>Department of Telecommunication Engineering, Urgench State University</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-year">2024 – 2025</div>
+          <div class="timeline-content">
+            <h3>Associate Professor</h3>
+            <p>Department of Telecommunication Engineering, Urgench Branch of Tashkent University of Information Technologies</p>
+          </div>
+        </article>
+        <article class="timeline-item accent">
+          <div class="timeline-year">2021 – 2024</div>
+          <div class="timeline-content">
+            <span class="timeline-tag">International doctoral research</span>
+            <h3>Doctoral Researcher</h3>
+            <p>Telecommunications and Systems Engineering, Universitat Autònoma de Barcelona</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-year">2020 – 2021</div>
+          <div class="timeline-content">
+            <h3>Senior Lecturer</h3>
+            <p>Urgench Branch of Tashkent University of Information Technologies</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-year">2017 – 2020</div>
+          <div class="timeline-content">
+            <h3>Assistant Teacher</h3>
+            <p>Urgench Branch of Tashkent University of Information Technologies</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="education-grid reveal">
+        <article class="edu-card featured">
+          <span>2021 – 2024</span>
+          <h3>Ph.D. in Electrical & Telecommunication Engineering</h3>
+          <p>Universitat Autònoma de Barcelona, Spain</p>
+        </article>
+        <article class="edu-card">
+          <span>2015 – 2017</span>
+          <h3>M.Sc. in Telecommunication Engineering</h3>
+          <p>Tashkent University of Information Technologies</p>
+        </article>
+        <article class="edu-card">
+          <span>2011 – 2015</span>
+          <h3>B.Sc. in Telecommunication Engineering</h3>
+          <p>Tashkent University of Information Technologies</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section research-section" id="research">
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 · Research</p>
+        <h2>Connectivity for the next generation of digital systems.</h2>
+      </div>
+      <div class="research-layout">
+        <div class="research-statement reveal">
+          <p class="lead">My research explores how satellite networks, IoT and intelligent system design can extend reliable digital connectivity and support emerging New Space services.</p>
+          <div class="topic-cloud" aria-label="Research interests">
+            <span>LEO constellations</span><span>Satellite-IoT</span><span>New Space</span><span>Multi-objective optimization</span><span>Regional link design</span><span>Broadband connectivity</span><span>Resilient architectures</span><span>Digital inclusion</span><span>Smart infrastructure</span>
+          </div>
+        </div>
+        <div class="research-visual reveal" aria-hidden="true">
+          <div class="planet"></div>
+          <div class="signal signal-1"></div>
+          <div class="signal signal-2"></div>
+          <div class="satellite-icon">✦</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="teaching">
+      <div class="section-heading compact reveal">
+        <p class="eyebrow">04 · Teaching</p>
+        <h2>Learning by building, testing and understanding.</h2>
+      </div>
+      <div class="teaching-grid reveal">
+        <article class="teaching-card">
+          <div class="card-index">01</div>
+          <h3>Computer Programming</h3>
+          <p>Foundations of programming, computational thinking, problem solving and practical coding with an emphasis on understanding how software is designed and tested.</p>
+          <div class="mini-tags"><span>Python</span><span>Algorithms</span><span>Problem solving</span></div>
+        </article>
+        <article class="teaching-card">
+          <div class="card-index">02</div>
+          <h3>Information Systems & Digital Technologies</h3>
+          <p>Computer hardware and software, operating systems, file management, productivity tools, internet navigation, online safety and basic troubleshooting.</p>
+          <div class="mini-tags"><span>Digital literacy</span><span>Productivity tools</span><span>Online safety</span></div>
+        </article>
+        <article class="teaching-card philosophy-card">
+          <div class="card-index">03</div>
+          <h3>Teaching Philosophy</h3>
+          <p>I aim to make technology understandable, practical and transferable—so students can apply what they learn beyond one course, one tool or one platform.</p>
+          <a href="#contact">Discuss teaching & collaboration →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="section-heading compact reveal">
+        <p class="eyebrow">05 · Publications</p>
+        <h2>Selected research</h2>
+      </div>
+      <div class="publication-list reveal">
+        <article class="publication-item">
+          <div class="publication-year">2024</div>
+          <div class="publication-body">
+            <span class="publication-type">Conference paper</span>
+            <h3>Design Tradeoffs of a Regional LEO System for Emerging New Space Integrated Services</h3>
+            <p><strong>B. Samandarov</strong> & A. Vázquez-Castro · IEEE International Humanitarian Technology Conference, Bari, Italy.</p>
+          </div>
+          <div class="publication-arrow">↗</div>
+        </article>
+        <article class="publication-item">
+          <div class="publication-year">2023</div>
+          <div class="publication-body">
+            <span class="publication-type">Journal article</span>
+            <h3>Quantum Advantage of Binary Discrete Modulations for Space Channels</h3>
+            <p><strong>B. Samandarov</strong> & A. Vázquez-Castro · IEEE Wireless Communications Letters, 12(5), 903–906.</p>
+          </div>
+          <div class="publication-arrow">↗</div>
+        </article>
+      </div>
+      <div class="profiles-panel reveal">
+        <div>
+          <span class="eyebrow">Research profiles</span>
+          <h3>Scholar · Scopus · ORCID · ResearchGate · IEEE</h3>
+        </div>
+        <p>Profile links will be connected in the content manager before final publication.</p>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading compact reveal">
+        <p class="eyebrow">06 · Research Projects</p>
+        <h2>From satellite systems to integrated services.</h2>
+      </div>
+      <div class="project-grid reveal">
+        <article class="project-card">
+          <div class="project-image">
+            <img src="https://d2pn8kiwq2w21t.cloudfront.net/images/CubeSat_splash.height-1024.jpg" alt="Small satellites orbiting Earth, NASA/JPL imagery" loading="lazy" />
+            <span class="project-status">2022–2024</span>
+          </div>
+          <div class="project-content">
+            <p class="project-kicker">European research project</p>
+            <h3>PhotSat Project</h3>
+            <p>European Union NextGenerationEU (PRTR-C17.I1) and Generalitat de Catalunya funded project connected with satellite communication and integrated New Space services.</p>
+            <div class="project-meta"><span>Role</span><strong>Researcher</strong></div>
+            <div class="mini-tags"><span>Satellite communication</span><span>New Space</span><span>EU funding</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="https://svs.gsfc.nasa.gov/vis/a010000/a011800/a011834/c-1920.jpg" alt="Earth from orbit, NASA Goddard imagery" loading="lazy" />
+            <span class="project-status">2024</span>
+          </div>
+          <div class="project-content">
+            <p class="project-kicker">LEO system research</p>
+            <h3>Regional LEO System Design</h3>
+            <p>Research on design tradeoffs for a regional Low Earth Orbit system supporting emerging New Space integrated services and connectivity.</p>
+            <div class="project-meta"><span>Focus</span><strong>System design & optimization</strong></div>
+            <div class="mini-tags"><span>LEO systems</span><span>System design</span><span>Connectivity</span></div>
+          </div>
+        </article>
+      </div>
+      <p class="image-credit reveal">Project imagery: NASA/JPL-Caltech and NASA Goddard Space Flight Center. Used as contextual scientific imagery; it does not depict the PhotSat hardware itself.</p>
+    </section>
+
+    <section class="section journey-section" id="journey">
+      <div class="section-heading reveal">
+        <p class="eyebrow">07 · PhD Journey</p>
+        <h2>Barcelona, research, milestones—and a doctoral chapter completed.</h2>
+      </div>
+
+      <div class="journey-intro reveal">
+        <p class="lead">From receiving international scholarship support in 2021 to completing doctoral studies at Universitat Autònoma de Barcelona in 2024, this period shaped my research direction, international experience and academic perspective.</p>
+      </div>
+
+      <div class="journey-gallery reveal">
+        <figure class="journey-photo tall">
+          <img src="assets/phd-barcelona.jpg" alt="Bunyod Samandarov in Barcelona during his doctoral period" loading="lazy" />
+          <figcaption><strong>Barcelona</strong><span>An international chapter begins.</span></figcaption>
+        </figure>
+        <figure class="journey-photo wide">
+          <img src="assets/phd-uab.jpg" alt="Academic group photograph at Universitat Autònoma de Barcelona" loading="lazy" />
+          <figcaption><strong>Research at UAB</strong><span>Doctoral research, presentations and academic exchange.</span></figcaption>
+        </figure>
+        <figure class="journey-photo wide">
+          <img src="assets/phd-diploma.jpg" alt="Bunyod Samandarov holding his doctoral diploma at Universitat Autònoma de Barcelona" loading="lazy" />
+          <figcaption><strong>2024 · Doctoral milestone</strong><span>Completion of the doctoral journey at UAB.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="journey-steps reveal">
+        <article><span>2021</span><h3>The journey begins</h3><p>Received scholarship support from the “El-yurt umidi” Foundation and began doctoral studies abroad.</p></article>
+        <article><span>2021–2024</span><h3>Doctoral research</h3><p>Research in Electrical and Telecommunication Engineering at Universitat Autònoma de Barcelona.</p></article>
+        <article><span>2022–2024</span><h3>Projects & publications</h3><p>Research activity connected with New Space, satellite communications, PhotSat and peer-reviewed publication.</p></article>
+        <article><span>2024</span><h3>Doctoral completion</h3><p>Completed the Ph.D. program at Universitat Autònoma de Barcelona.</p></article>
+      </div>
+    </section>
+
+    <section class="section awards-section" id="awards">
+      <div class="award-card reveal">
+        <div class="award-year">2021</div>
+        <div class="award-copy">
+          <p class="eyebrow">Award & Scholarship</p>
+          <h2>“El-yurt umidi” Foundation Scholarship</h2>
+          <p>Awarded scholarship support from the “El-yurt umidi” Foundation to pursue doctoral studies abroad.</p>
+          <a href="https://el-yurt.uz/" target="_blank" rel="noopener">Visit the foundation ↗</a>
+        </div>
+        <div class="award-symbol" aria-hidden="true">✦</div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-card reveal">
+        <p class="eyebrow">08 · Contact</p>
+        <h2>Research, teaching or academic collaboration?</h2>
+        <p>For research collaboration, academic projects, teaching opportunities or professional correspondence, feel free to get in touch.</p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:bunyod.academic@gmail.com">bunyod.academic@gmail.com</a>
+          <a class="button button-ghost" href="assets/CV_Bunyod.pdf" target="_blank" rel="noopener">View CV</a>
+        </div>
+        <div class="contact-meta"><span>Khorezm, Uzbekistan</span><span>English · Spanish · Uzbek</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>Bunyod Samandarov</strong><span>Professor · Researcher · Educator</span></div>
+    <div class="footer-links"><a href="#top">Back to top ↑</a><a href="admin.html" class="admin-link">Admin</a></div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
