@@ -1,4 +1,19 @@
-# Bunyod Samandarov Academic Portfolio — Version 2
+# Bunyod Academic Portfolio — Version 2.5
+
+This package is the current replacement build for the live GitHub/Netlify site.
+
+Included latest updates:
+- Current role: Professor, Department of Software Engineering, Al-Khwarizmi University (2026–Present)
+- Urgench State University role corrected to 2025–2026
+- Research, Teaching, Publications, Research Projects, Awards and PhD Journey sections
+- 2021 “El-yurt umidi” Foundation scholarship
+- ORCID, Scopus, Google Scholar and doctoral dissertation links
+- PhD Journey photos supplied by Bunyod Samandarov
+- Research-project contextual scientific imagery with credits
+- Hero portrait layout fixed so Research/Teaching cards no longer cover the face
+- CV button and admin-ready page retained
+
+Upload the CONTENTS of this folder to the root of the existing `bunyod-portfolio` GitHub repository. Netlify should redeploy automatically from `main`.
 
 A responsive static academic portfolio designed for Netlify.
 
@@ -27,7 +42,7 @@ Upload/commit all files and the entire `assets` folder to the existing GitHub re
 
 ## Before final public release
 1. Replace `assets/CV_Bunyod.pdf` with the latest CV if needed. The currently included PDF is the previously supplied version.
-2. Add verified Google Scholar / Scopus / ORCID / ResearchGate / IEEE profile URLs.
+2. Google Scholar, Scopus, ORCID and Dialnet dissertation links are already connected.
 3. Connect Supabase to `admin.html` after the public design is approved.
 4. Add more project photographs if you want project-specific imagery rather than contextual NASA imagery.
 

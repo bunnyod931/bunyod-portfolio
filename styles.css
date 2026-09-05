@@ -72,12 +72,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .orbit { position:absolute; border:1px solid rgba(109,215,255,.20); border-radius:50%; transform:rotate(-18deg); }
 .orbit-one { width:610px; height:335px; }
 .orbit-two { width:720px; height:440px; border-color:rgba(182,156,255,.13); transform:rotate(20deg); }
-.floating-card { position:absolute; z-index:5; width:230px; padding:14px 16px; border:1px solid var(--line); border-radius:16px; backdrop-filter:blur(14px); background:rgba(8,20,35,.78); box-shadow:0 14px 40px rgba(0,0,0,.2); }
-.floating-card span, .floating-card strong { display:block; }
-.floating-card span { color:var(--accent); font-size:.68rem; text-transform:uppercase; letter-spacing:.12em; margin-bottom:3px; }
-.floating-card strong { font-size:.82rem; }
-.floating-card-a { left:-20px; top:25%; }
-.floating-card-b { right:-35px; bottom:19%; }
+.hero-focus-cards { position:relative; z-index:4; width:min(100%,485px); display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+.focus-card { padding:14px 16px; border:1px solid var(--line); border-radius:16px; background:rgba(8,20,35,.82); box-shadow:0 12px 34px rgba(0,0,0,.18); }
+.focus-card span, .focus-card strong { display:block; }
+.focus-card span { color:var(--accent); font-size:.68rem; text-transform:uppercase; letter-spacing:.12em; margin-bottom:4px; }
+.focus-card strong { font-size:.82rem; line-height:1.35; }
 .section-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:90px; border-top:1px solid var(--line); }
 .section-heading h2 { margin:0; font-size:clamp(2.6rem,5vw,5.2rem); line-height:1; letter-spacing:-.055em; max-width:950px; }
 .section-heading.compact { margin-bottom:46px; }
@@ -184,7 +183,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .site-nav { gap:13px; }
   .site-nav a { font-size:.79rem; }
   .hero { gap:34px; }
-  .floating-card { display:none; }
+  .hero-focus-cards { width:min(100%,485px); }
   .education-grid, .teaching-grid { grid-template-columns:1fr 1fr; }
   .education-grid .edu-card:last-child, .teaching-grid .philosophy-card { grid-column:1/-1; }
   .journey-steps { grid-template-columns:1fr 1fr; }
@@ -226,3 +225,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .contact-meta, .site-footer { flex-direction:column; }
   .contact-actions .button { width:100%; }
 }
+
+.profile-links { display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end; }
+.profile-links a { display:inline-flex; align-items:center; min-height:40px; padding:9px 13px; border:1px solid var(--line); border-radius:999px; color:var(--text); text-decoration:none; background:rgba(255,255,255,.03); transition:transform .2s ease, border-color .2s ease, background .2s ease; }
+.profile-links a:hover { transform:translateY(-2px); border-color:rgba(109,215,255,.45); background:rgba(109,215,255,.07); }
+@media (max-width:850px) { .hero-focus-cards { grid-template-columns:1fr; } .profile-links { justify-content:flex-start; } }
