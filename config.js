@@ -1,6 +1,4 @@
-// Supabase configuration
-// Replace these two values after creating your free Supabase project.
 window.PORTFOLIO_CONFIG = {
-  SUPABASE_URL: 'YOUR_SUPABASE_URL',
-  SUPABASE_ANON_KEY: 'YOUR_SUPABASE_ANON_KEY'
+  supabaseUrl: 'https://dgmkuegaesxzqwljzmry.supabase.co',
+  supabaseKey: 'sb_publishable_6qC3cci1fwcedKb6QDpNXw_ZxJjvvCW'
 };

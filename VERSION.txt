@@ -1,3 +1,2 @@
-Bunyod Academic Portfolio
-Version 2.5
-Latest content/profile/link/layout updates included.
+Bunyod Academic Portfolio — Version 2.6
+Supabase-connected public site + private administrator panel.

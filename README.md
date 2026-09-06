@@ -1,52 +1,44 @@
-# Bunyod Academic Portfolio — Version 2.5
+# Bunyod Academic Portfolio — Version 2.6
 
-This package is the current replacement build for the live GitHub/Netlify site.
+This package upgrades Version 2.5 with a real Supabase-connected administrator panel.
 
-Included latest updates:
-- Current role: Professor, Department of Software Engineering, Al-Khwarizmi University (2026–Present)
-- Urgench State University role corrected to 2025–2026
-- Research, Teaching, Publications, Research Projects, Awards and PhD Journey sections
-- 2021 “El-yurt umidi” Foundation scholarship
-- ORCID, Scopus, Google Scholar and doctoral dissertation links
-- PhD Journey photos supplied by Bunyod Samandarov
-- Research-project contextual scientific imagery with credits
-- Hero portrait layout fixed so Research/Teaching cards no longer cover the face
-- CV button and admin-ready page retained
+## Already configured
 
-Upload the CONTENTS of this folder to the root of the existing `bunyod-portfolio` GitHub repository. Netlify should redeploy automatically from `main`.
+- Supabase project URL and publishable key are stored in `config.js`.
+- The publishable key is intended for browser use. Never place a Supabase secret/service-role key in this repository.
+- Your existing Supabase database/RLS setup is compatible with this build.
+- `admin.html` uses Supabase email/password authentication and verifies `public.is_site_admin()` before allowing edits.
 
-A responsive static academic portfolio designed for Netlify.
+## After uploading to GitHub
 
-## Included
-- Modern academic homepage and stronger professional identity
-- Updated 2026–Present Professor position at Al-Khwarizmi University
-- Experience and education timeline
-- Research interests
-- Teaching section
-- Selected publications
-- Research projects with contextual NASA/JPL imagery
-- PhD Journey using the supplied Barcelona/UAB photographs
-- 2021 “El-yurt umidi” Foundation scholarship
-- CV button
-- Responsive/mobile navigation
-- Admin placeholder for the next Supabase phase
+1. Replace the matching files in the existing `bunyod-portfolio` repository.
+2. Commit to `main`.
+3. Netlify will redeploy automatically.
+4. Open `/admin.html` on your Netlify site.
+5. Sign in with the admin email/password you created in Supabase.
+6. Click **Initialize Version 2.5 content** once. It only seeds sections that are still empty; it does not replace existing rows.
 
-## Netlify deployment
-The repository is plain HTML/CSS/JS. Use:
-- Branch: `main`
-- Base directory: blank
-- Build command: blank
-- Publish directory: blank (repository root)
+## What the Admin panel manages
 
-Upload/commit all files and the entire `assets` folder to the existing GitHub repository. Netlify will redeploy automatically.
+- Profile & homepage
+- Experience
+- Education
+- Awards & Scholarships
+- Teaching
+- Publications
+- Research Projects
+- PhD Journey
+- Research Profiles
 
-## Before final public release
-1. Replace `assets/CV_Bunyod.pdf` with the latest CV if needed. The currently included PDF is the previously supplied version.
-2. Google Scholar, Scopus, ORCID and Dialnet dissertation links are already connected.
-3. Connect Supabase to `admin.html` after the public design is approved.
-4. Add more project photographs if you want project-specific imagery rather than contextual NASA imagery.
+The public website keeps the Version 2.5 static content as a fallback, then replaces sections with Supabase data whenever database rows exist.
 
-## Image credits
-- CubeSat image: NASA/JPL-Caltech, via JPL CubeSats and SmallSats topic page.
-- Earth-from-orbit image: NASA Goddard Space Flight Center, Scientific Visualization Studio.
-- PhD Journey and portrait photographs: supplied by Bunyod Samandarov.
+## Photos and CV
+
+Version 2.6 supports photo/CV URLs and local asset paths (for example `assets/profile.jpg`). Direct file uploads into Supabase Storage are not enabled in this build yet. This keeps the current admin setup secure without adding storage policies before review.
+
+## Security
+
+- RLS remains enabled.
+- Public users get read-only access to published content.
+- Only the user listed in `site_admins` can write through the Admin panel.
+- Never expose database passwords, secret keys, or service-role keys.
